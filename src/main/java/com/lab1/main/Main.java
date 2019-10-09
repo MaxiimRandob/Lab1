@@ -1,19 +1,22 @@
 package com.lab1.main;
 
-import com.lab1.client.Terminal;
+import java.util.NoSuchElementException;
 
 public class Main
 {
+	private static Terminal terminal;
+
 	public static void main(String[] args)
 	{
-		Terminal terminal = new Terminal();
-		terminal.run();
-	}
-
-	public static void run()
-	{
-		Terminal terminal = new Terminal();
-		terminal.run();
+		terminal = new Terminal();
+		try
+		{
+			terminal.run();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println("Wrong input");
+		}
 	}
 }
 

@@ -1,4 +1,6 @@
-package com.lab1.client;
+package com.lab1.main;
+
+import com.lab1.client.Airline;
 
 import java.util.Scanner;
 
@@ -93,31 +95,13 @@ public class Terminal
 			}
 		}
 
-		/*if (command.equals("fuel"))
-		{
-			if (airline == null)
-			{
-				System.out.println("Nothing to count yet");
-				return;
-			}
-
-			double lowBound, highBound;
-			Scanner in = new Scanner(System.in);
-			System.out.println("Write low range bound: ");
-			lowBound = in.nextDouble();
-			System.out.println("Write high range bound: ");
-			highBound = in.nextDouble();
-			in.close();
-
-			System.out.println("Airplane with fuel consumption of given range: " + airline.findAirplaneByFuelConsumptionRange(lowBound, highBound));
-		} */
 	}
 
 
 
 	private boolean isSupported(final String command)
 	{
-		return command.equals("range") || command.equals("capacity") || command.equals("create") || /*command.equals("fuel") ||*/ command.equals("fill");
+		return command.equals("range") || command.equals("capacity") || command.equals("create") || command.equals("fill");
 	}
 
 	private boolean isExit(final String command)
@@ -136,7 +120,6 @@ public class Terminal
 		System.out.println("'fill' - to fill Airline with airplanes");
 		System.out.println("'capacity' - to calculate and show total capacity and load capacity");
 		System.out.println("'range' - to sort airplanes by range and show");
-		//System.out.println("'fuel' - to show fuel consumption parameters in given range");
 		System.out.println("help");
 		System.out.println("exit");
 	}

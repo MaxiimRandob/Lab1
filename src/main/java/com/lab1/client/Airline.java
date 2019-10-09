@@ -13,6 +13,7 @@ import java.util.Collection;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class Airline
@@ -41,10 +42,19 @@ public class Airline
 		double lowRangeBound,
 		double highRangeBound)
 	{
-		return airplanes
-			.stream()
-			.filter(airplane -> airplane.getFuelConsumption() >= lowRangeBound && airplane.getFuelConsumption() <= highRangeBound)
-			.findFirst().get().getName();
+		String result = null;
+		try
+		{
+			result = airplanes
+				.stream()
+				.filter(airplane -> airplane.getFuelConsumption() >= lowRangeBound && airplane.getFuelConsumption() <= highRangeBound)
+				.findFirst().get().getName();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println("No elements in given range");
+		}
+		return result;
 	}
 
 	public void addAirplane(final Airplane airplane)
