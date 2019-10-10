@@ -1,6 +1,7 @@
 package com.lab1.main;
 
 import com.lab1.client.Airline;
+import org.apache.log4j.Logger;
 
 import java.util.Scanner;
 
@@ -10,19 +11,24 @@ public class Terminal
 
 	private Airline airline;
 
+	private static final Logger logger = Logger.getLogger(Terminal.class);
+
 	public void run()
 	{
 		while (true)
 		{
+			logger.info("Terminal is working");
 			final String command = getCommand();
 
 			if (isExit(command))
 			{
+				logger.info("User typed Exit");
 				break;
 			}
 
 			if (isHelp(command))
 			{
+				logger.info("Printed Help");
 				displayHelp();
 				continue;
 			}
@@ -33,6 +39,7 @@ public class Terminal
 			}
 			else
 			{
+				logger.info("Command id not supported");
 				displayHelp();
 			}
 		}
@@ -54,6 +61,7 @@ public class Terminal
 			}
 			else
 			{
+
 				System.out.println("Airline is already created!");
 			}
 		}
@@ -67,6 +75,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
+				logger.error("failed to fill airline with airplanes", e);
 				System.out.println("Nothing to fill yet");
 			}
 		}
@@ -80,6 +89,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
+				logger.error("failed to show capacity of airline", e);
 				System.out.println("Nothing to show yet");
 			}
 		}
@@ -91,6 +101,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
+				logger.error("failed to show search range of airline", e);
 				System.out.println("Nothing to show yet");
 			}
 		}
