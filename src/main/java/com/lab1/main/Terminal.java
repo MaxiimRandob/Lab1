@@ -11,24 +11,24 @@ public class Terminal
 
 	private Airline airline;
 
-	private static final Logger logger = Logger.getLogger(Terminal.class);
+	private static final Logger LOG = Logger.getLogger(Terminal.class);
 
 	public void run()
 	{
 		while (true)
 		{
-			logger.info("Terminal is working");
+			LOG.info("Terminal is working");
 			final String command = getCommand();
 
 			if (isExit(command))
 			{
-				logger.info("User typed Exit");
+				LOG.info("User typed Exit");
 				break;
 			}
 
 			if (isHelp(command))
 			{
-				logger.info("Printed Help");
+				LOG.info("Printed Help");
 				displayHelp();
 				continue;
 			}
@@ -39,7 +39,7 @@ public class Terminal
 			}
 			else
 			{
-				logger.info("Command id not supported");
+				LOG.info("Command id not supported");
 				displayHelp();
 			}
 		}
@@ -75,7 +75,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
-				logger.error("failed to fill airline with airplanes", e);
+				LOG.error("failed to fill airline with airplanes", e);
 				System.out.println("Nothing to fill yet");
 			}
 		}
@@ -89,7 +89,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
-				logger.error("failed to show capacity of airline", e);
+				LOG.error("failed to show capacity of airline", e);
 				System.out.println("Nothing to show yet");
 			}
 		}
@@ -101,7 +101,7 @@ public class Terminal
 			}
 			catch (NullPointerException e)
 			{
-				logger.error("failed to show search range of airline", e);
+				LOG.error("failed to show search range of airline", e);
 				System.out.println("Nothing to show yet");
 			}
 		}
