@@ -7,6 +7,7 @@ import com.lab1.model.An_24;
 import com.lab1.model.Boeing_747;
 import com.lab1.model.Boeing_767;
 import com.lab1.model.Boeing_787;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,6 +19,8 @@ import java.util.Objects;
 
 public class Airline
 {
+
+	private static final Logger logger = Logger.getLogger(Airline.class);
 
 	private final Collection<Airplane> airplanes = new LinkedList<>();
 
@@ -35,6 +38,7 @@ public class Airline
 	{
 		final List<Airplane> list = new ArrayList<>(airplanes);
 		list.sort(Comparator.comparingInt(Airplane::getRangeOfFlight));
+		logger.info("Sorted list of airplanes is created");
 		return list;
 	}
 
@@ -52,6 +56,7 @@ public class Airline
 		}
 		catch (NoSuchElementException e)
 		{
+			logger.error("Wrong range", e);
 			System.out.println("No elements in given range");
 		}
 		return result;
@@ -73,12 +78,14 @@ public class Airline
 		Boeing_787 boeing_787 = new Boeing_787();
 		Boeing_767 boeing_767 = new Boeing_767();
 
+		logger.info("Airplanes are created");
 		this.addAirplane(an_2);
 		this.addAirplane(an_24);
 		this.addAirplane(an_225);
 		this.addAirplane(boeing_747);
 		this.addAirplane(boeing_787);
 		this.addAirplane(boeing_767);
+		logger.info("Airline is filled");
 	}
 
 	public Collection<Airplane> getAirplanes()
