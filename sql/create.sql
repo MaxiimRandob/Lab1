@@ -10,18 +10,18 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS 'mydb';
+drop SCHEMA IF EXISTS mydb;
 
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+create SCHEMA IF NOT EXISTS mydb DEFAULT CHARACTER SET utf8;
 USE `mydb` ;
 
 -- -----------------------------------------------------
 -- Table `mydb`.`Airline`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Airline` (
+create TABLE IF NOT EXISTS `mydb`.`Airline` (
   `airline_id` INT NOT NULL AUTO_INCREMENT,
   `total_capacity` INT NULL,
   `total_carrying_capacity` INT NULL,
@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `mydb`.`Airplane`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Airplane` (
+create TABLE IF NOT EXISTS `mydb`.`Airplane` (
   `airplane_id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `capacity` INT NOT NULL,
@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Airplane` (
   CONSTRAINT `fk_Airplane_Airline`
     FOREIGN KEY (`Airline_airline_id`)
     REFERENCES `mydb`.`Airline` (`airline_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON delete NO ACTION
+    ON update NO ACTION)
 ENGINE = InnoDB;
 
 

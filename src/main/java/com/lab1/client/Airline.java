@@ -1,6 +1,8 @@
 package com.lab1.client;
 
 import com.lab1.Interfaces.Airplane;
+import com.lab1.dao.AirplaneDao;
+import com.lab1.dao.impl.AirplaneDaoImpl;
 import com.lab1.model.An_2;
 import com.lab1.model.An_225;
 import com.lab1.model.An_24;
@@ -22,7 +24,7 @@ public class Airline
 
 	private static final Logger logger = Logger.getLogger(Airline.class);
 
-	private final Collection<Airplane> airplanes = new LinkedList<>();
+	private Collection<Airplane> airplanes = new LinkedList<>();
 
 	public int getTotalCarryingCapacity()
 	{
@@ -71,20 +73,8 @@ public class Airline
 
 	public void fillAirline()
 	{
-		An_2 an_2 = new An_2();
-		An_24 an_24 = new An_24();
-		An_225 an_225 = new An_225();
-		Boeing_747 boeing_747 = new Boeing_747();
-		Boeing_787 boeing_787 = new Boeing_787();
-		Boeing_767 boeing_767 = new Boeing_767();
-
-		logger.info("Airplanes are created");
-		this.addAirplane(an_2);
-		this.addAirplane(an_24);
-		this.addAirplane(an_225);
-		this.addAirplane(boeing_747);
-		this.addAirplane(boeing_787);
-		this.addAirplane(boeing_767);
+		AirplaneDao airplaneDao = new AirplaneDaoImpl();
+		this.airplanes = airplaneDao.getAirplanes();
 		logger.info("Airline is filled");
 	}
 

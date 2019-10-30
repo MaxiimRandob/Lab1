@@ -2,8 +2,8 @@ package com.lab1.dao.impl;
 
 import com.lab1.Interfaces.Airplane;
 import com.lab1.dao.AirplaneDao;
+import com.lab1.entity.AirplaneModel;
 import com.lab1.persistance.ConnectionFactory;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,83 +21,19 @@ public class AirplaneDaoImpl implements AirplaneDao
 		Connection connection = ConnectionFactory.getConnection();
 		try(Connection connection1 = ConnectionFactory.getConnection())
 		{
-			PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM 'airplanes'");
+			PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM airplane");
 			ResultSet resultSet = preparedStatement.executeQuery();
-			if(resultSet.next())
+			while(resultSet.next())
 			{
-				list.add(new Airplane() {
-					@Override
-					public int getCapacity()
-					{
-						try
-						{
-							return resultSet.getInt("capacity");
-						}
-						catch (SQLException e)
-						{
-							e.printStackTrace();
-						}
-						return 0;
-					}
-
-					@Override
-					public int getCarryingCapacity()
-					{
-						try
-						{
-							return resultSet.getInt("capacity");
-						}
-						catch (SQLException e)
-						{
-							e.printStackTrace();
-						}
-						return 0;
-					}
-
-					@Override
-					public int getRangeOfFlight()
-					{
-						try
-						{
-							return resultSet.getInt("capacity");
-						}
-						catch (SQLException e)
-						{
-							e.printStackTrace();
-						}
-						return 0;
-					}
-
-					@Override
-					public double getFuelConsumption()
-					{
-						try
-						{
-							return resultSet.getInt("capacity");
-						}
-						catch (SQLException e)
-						{
-							e.printStackTrace();
-						}
-						return 0;
-					}
-
-					@Override
-					public String getName()
-					{
-						try
-						{
-							return resultSet.getString("capacity");
-						}
-						catch (SQLException e)
-						{
-							e.printStackTrace();
-						}
-						return null;
-					}
-				});
+				AirplaneModel airplane = new AirplaneModel();
+				airplane.setCapacity(resultSet.getInt("capacity"));
+				airplane.setCarryingCapacity(resultSet.getInt("carrying_capacity"));
+				airplane.setRangeOfFlight(resultSet.getInt("flying_range"));
+				airplane.setFuelConsumption(resultSet.getDouble("fuel_consumption"));
+				airplane.setName(resultSet.getString("name"));
+				list.add(airplane);
+				System.out.println(list);
 			}
-
 		}
 		catch (SQLException e)
 		{

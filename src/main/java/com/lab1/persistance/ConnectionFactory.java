@@ -1,8 +1,7 @@
 package com.lab1.persistance;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -12,7 +11,7 @@ import java.util.Properties;
 
 public class ConnectionFactory
 {
-	private final static Logger LOG = LoggerFactory.getLogger(ConnectionFactory.class);
+	private static final Logger LOG = Logger.getLogger(ConnectionFactory.class);
 
 	private static final ConnectionFactory INSTANCE = new ConnectionFactory();
 

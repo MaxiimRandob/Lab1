@@ -37,3 +37,35 @@ java.lang.NullPointerException
 2019-10-16 16:51:30 INFO  Terminal:20 - Terminal is working
 2019-10-16 16:53:30 INFO  Airline:41 - Sorted list of airplanes is created
 2019-10-16 16:53:30 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:40:37 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:40:39 INFO  Terminal:42 - Command id not supported
+2019-10-30 15:40:39 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:40:44 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:40:49 INFO  ConnectionFactory:37 - Database created: com.mysql.cj.jdbc.MysqlDataSource@64cee07
+2019-10-30 15:40:49 INFO  Airline:78 - Airline is filled
+2019-10-30 15:40:49 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:41:33 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:41:36 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:41:39 INFO  ConnectionFactory:37 - Database created: com.mysql.cj.jdbc.MysqlDataSource@6842775d
+2019-10-30 15:41:39 INFO  Airline:78 - Airline is filled
+2019-10-30 15:41:39 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:43:19 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:43:22 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:43:26 INFO  ConnectionFactory:37 - Database created: com.mysql.cj.jdbc.MysqlDataSource@6842775d
+2019-10-30 15:43:26 INFO  Airline:78 - Airline is filled
+2019-10-30 15:43:26 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:43:32 INFO  Airline:43 - Sorted list of airplanes is created
+2019-10-30 15:43:32 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:45:25 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:45:29 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:45:31 INFO  ConnectionFactory:37 - Database created: com.mysql.cj.jdbc.MysqlDataSource@6842775d
+2019-10-30 15:45:31 INFO  Airline:78 - Airline is filled
+2019-10-30 15:45:31 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:56:21 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:56:26 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:56:29 INFO  ConnectionFactory:37 - Database created: com.mysql.cj.jdbc.MysqlDataSource@6842775d
+2019-10-30 15:56:29 INFO  Airline:78 - Airline is filled
+2019-10-30 15:56:29 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:56:34 INFO  Airline:43 - Sorted list of airplanes is created
+2019-10-30 15:56:34 INFO  Terminal:20 - Terminal is working
+2019-10-30 15:56:41 INFO  Terminal:20 - Terminal is working
