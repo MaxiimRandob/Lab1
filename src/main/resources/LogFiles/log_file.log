@@ -1,0 +1,39 @@
+2019-10-11 16:40:35 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:40:41 INFO  Terminal:42 - Command id not supported
+2019-10-11 16:40:41 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:40:45 ERROR Terminal:78 - failed to fill airline with airplanes
+java.lang.NullPointerException
+	at com.lab1.main.Terminal.processCommand(Terminal.java:73)
+	at com.lab1.main.Terminal.run(Terminal.java:38)
+	at com.lab1.main.Main.runTerminal(Main.java:34)
+	at com.lab1.main.Main.main(Main.java:24)
+2019-10-11 16:40:45 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:40:49 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:40:51 INFO  Airline:81 - Airplanes are created
+2019-10-11 16:40:51 INFO  Airline:88 - Airline is filled
+2019-10-11 16:40:51 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:40:56 INFO  Airline:41 - Sorted list of airplanes is created
+2019-10-11 16:40:56 INFO  Terminal:20 - Terminal is working
+2019-10-11 16:41:10 INFO  Terminal:25 - User typed Exit
+2019-10-16 16:50:29 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:50:36 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:50:38 INFO  Airline:81 - Airplanes are created
+2019-10-16 16:50:38 INFO  Airline:88 - Airline is filled
+2019-10-16 16:50:38 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:50:42 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:11 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:17 ERROR Terminal:92 - failed to show capacity of airline
+java.lang.NullPointerException
+	at com.lab1.main.Terminal.processCommand(Terminal.java:87)
+	at com.lab1.main.Terminal.run(Terminal.java:38)
+	at com.lab1.main.Main.runTerminal(Main.java:34)
+	at com.lab1.main.Main.main(Main.java:24)
+2019-10-16 16:51:17 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:21 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:24 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:27 INFO  Airline:81 - Airplanes are created
+2019-10-16 16:51:27 INFO  Airline:88 - Airline is filled
+2019-10-16 16:51:27 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:51:30 INFO  Terminal:20 - Terminal is working
+2019-10-16 16:53:30 INFO  Airline:41 - Sorted list of airplanes is created
+2019-10-16 16:53:30 INFO  Terminal:20 - Terminal is working
